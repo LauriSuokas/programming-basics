@@ -6,7 +6,8 @@ namespace Condition_task_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Ohjelma lajittelee luvut nousevaan järjestykseen");
+            Console.WriteLine("Syötä numero");
         }
     }
 }
