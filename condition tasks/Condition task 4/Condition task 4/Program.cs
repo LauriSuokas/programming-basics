@@ -11,26 +11,40 @@ namespace Condition_task_4
             string userInput = Console.ReadLine();
 
             int number = int.Parse(userInput);
-            Console.Write("Syötä 1. luku");
+            Console.WriteLine("Syötä 2. luku");
+            userInput = Console.ReadLine();
 
             int number1 = int.Parse(userInput);
-            Console.Write("Syötä 2. luku");
+            Console.WriteLine("Syötä 3. luku");
+            userInput = Console.ReadLine();
 
             int number2 = int.Parse(userInput);
-            Console.Write("Syötä 3. luku");
 
-            if (number < number1)
+
+            if (number > number1)
             {
-                if (number1 < number2)
-                    Console.WriteLine($"Luku {number}, {number1}, {number2}");
+                if (number1 > number2)
+                    Console.WriteLine($"Luku {number2}, {number1}, {number}");
 
                 else
                 {
-                    Console.WriteLine($"Luku {number}, {number2}, {number1}");
-                    if (number1 < number)
+                    if (number2 < number)
+                        Console.WriteLine($"Luku {number1}, {number2}, {number}");
+                    else
                         Console.WriteLine($"Luku {number1}, {number}, {number2}");
                 }
-
+            }
+            else
+            {
+                if (number > number2)
+                    Console.WriteLine($"Luku {number2}, {number}, {number1}");
+                else
+                {
+                    if (number1 < number2)
+                        Console.WriteLine($"Luku {number}, {number1}, {number2}");
+                    else
+                        Console.WriteLine($"Luku {number}, {number2}, {number1}");
+                }
             }
         }
     }
